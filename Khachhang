@@ -1,0 +1,2 @@
+INSERT INTO KhachHang(hoTen,CMND, ngaySinh, gioiTinh,sDT) VALUES
+(N'Ngô Minh Nam', N'699908957', '1980-3-14', 1, N'0864669003'),

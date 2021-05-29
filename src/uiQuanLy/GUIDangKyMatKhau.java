@@ -35,6 +35,7 @@ import javax.swing.table.TableCellRenderer;
 
 import services.QuanLyKhachHang;
 import services.QuanLyNhanVien;
+import uiLogin.GUILogin;
 
 public class GUIDangKyMatKhau extends JFrame implements ActionListener {
 	JLabel lbMa, lbPass, lbPass2;
@@ -166,7 +167,7 @@ public class GUIDangKyMatKhau extends JFrame implements ActionListener {
 
 	}
 	public static void main(String[] args) {
-		new GUIDangKyMatKhau(1);
+		new GUILogin();
 	}
 
 	public void fillPass() {

@@ -211,7 +211,7 @@ public class GUIThueTraPhong extends JPanel implements ActionListener, MouseList
 		b3.revalidate();
 		b3.repaint();
 		int x = 4;
-		int y = ql.tongSoPhong() / 4 + 1;
+		int y = ql.tongSoPhong() / 4 + 2;
 		List<String> dsPhong = new ArrayList<String>();
 		for (Phong p : list) {
 			DecimalFormat df = new DecimalFormat("###,000");
@@ -245,7 +245,7 @@ public class GUIThueTraPhong extends JPanel implements ActionListener, MouseList
 		pbox2.revalidate();
 		pbox2.repaint();
 		pbox2.setOpaque(false);
-		pbox2.setLayout(test = new GridLayout(y, x, 20, 30));
+		pbox2.setLayout(test = new GridLayout(y, x, 5, 5));
 
 		try {
 			for (int i = 0; i < tenDsPhong.length; i++) {
@@ -261,7 +261,7 @@ public class GUIThueTraPhong extends JPanel implements ActionListener, MouseList
 				// System.out.println(mauSac);
 				pbox2.add(phong[i]);
 				phong[i].addActionListener(this);
-				createButton(phong[i], new Dimension(20, 100));
+				createButton(phong[i], new Dimension(500, 100));
 			}
 			
 		} catch (Exception e2) {
@@ -295,8 +295,9 @@ public class GUIThueTraPhong extends JPanel implements ActionListener, MouseList
 			}
 		}
 		if (src.equals(btnBack)) {
-			new GUIMenu(GUIMenu.ktrLogin);
-			parent.setVisible(false);
+//			new GUIMenu(GUIMenu.ktrLogin);
+//			parent.setVisible(false);
+			this.setVisible(false);
 		}
 		if(src.equals(btnTimNgay)) {
 			if(jdcFrom.getDate() == null||jdcTo.getDate() == null) {

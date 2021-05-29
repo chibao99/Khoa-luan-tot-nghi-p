@@ -13,9 +13,10 @@ public class Database {
 	}
 	
 	public static  void connect() {
-		String url="jdbc:sqlserver://103.125.170.20:10032;DatabaseName=QLKS";
+//		String url="jdbc:sqlserver://103.125.170.20:10032;DatabaseName=QLKS";
+		String url = "jdbc:sqlserver://localhost:1434;DatabaseName=QLKS";
 		String user="sa";
-		String password="Goboi123";
+		String password="lcb";
 		try {
 			con = DriverManager.getConnection(url,user,password);
 		}

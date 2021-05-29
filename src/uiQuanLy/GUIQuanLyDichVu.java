@@ -585,8 +585,9 @@ public class GUIQuanLyDichVu extends JPanel implements ActionListener, MouseList
 		} else if (src.equals(btnXoaRong)) {
 			actionRong();
 		} else if (src.equals(btnBack)) {
-			new GUIMenu(1);
-			child.setVisible(false);
+//			new GUIMenu(1);
+//			child.setVisible(false);
+			this.setVisible(false);
 		}
 	}
 

@@ -289,8 +289,9 @@ public class GUIQuanLyNhanVien extends JPanel implements ActionListener, MouseLi
 		Object src = e.getSource();
 
 		if (src.equals(btnBack)) {
-			new GUIMenu(GUIMenu.ktrLogin);
-			child.setVisible(false);
+//			new GUIMenu(GUIMenu.ktrLogin);
+//			child.setVisible(false);
+			this.setVisible(false);
 		} else if (src.equals(btnThoat)) {
 			thoat();
 		} else if (src.equals(btnThem)) {

@@ -104,7 +104,7 @@ public class GUIQLPhong extends JPanel implements MouseListener, ActionListener 
 		b1.add(b2 = Box.createHorizontalBox());
 		b2.add(btnThem = new JButton("Thêm", new ImageIcon(".\\image\\add.png")));
 		b2.add(Box.createHorizontalStrut(10));
-		b2.add(btnXoa = new JButton("Xoá", new ImageIcon(".\\image\\delete.png")));
+//		b2.add(btnXoa = new JButton("Xoá", new ImageIcon(".\\image\\delete.png")));
 		b2.add(Box.createHorizontalStrut(10));
 		b2.add(btnSua = new JButton("Chỉnh Sửa", new ImageIcon(".\\image\\edit.png")));
 //		b2.add(btnLuu = new JButton("Lưu", new ImageIcon(".\\image\\save.png")));
@@ -175,7 +175,7 @@ public class GUIQLPhong extends JPanel implements MouseListener, ActionListener 
 //		btnThem.setEnabled(false);
 		btnLamMoi.setEnabled(false);
 		btnSua.setEnabled(false);
-		btnXoa.setEnabled(false);
+//		btnXoa.setEnabled(false);
 		cmbLoaiPhong.setSelectedItem(null);
 
 		layGiaTrichoDienTuDong();
@@ -185,7 +185,7 @@ public class GUIQLPhong extends JPanel implements MouseListener, ActionListener 
 		btnBack.addActionListener(this);
 		btnTim.addActionListener(this);
 		btnThem.addActionListener(this);
-		btnXoa.addActionListener(this);
+//		btnXoa.addActionListener(this);
 		btnSua.addActionListener(this);
 		table.addMouseListener(this);
 //		btnLuu.addActionListener(new luu());
@@ -275,8 +275,9 @@ public class GUIQLPhong extends JPanel implements MouseListener, ActionListener 
 		else if (src.equals(btnTim))
 			Tim();
 		else if (src.equals(btnBack))
-			goBack();
-
+//			goBack();
+			this.setVisible(false);
+		
 	}
 
 	// chưa xử lý dữ liệu vào

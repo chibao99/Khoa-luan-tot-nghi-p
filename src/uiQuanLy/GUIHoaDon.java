@@ -52,6 +52,7 @@ import services.QuanLyHoaDon;
 import services.QuanLyKhachHang;
 import services.QuanLyPhieuDatPhong;
 import services.QuanLyPhong;
+import uiLogin.GUILogin;
 import uiLogin.GUIMenu;
 
 public class GUIHoaDon extends JPanel implements ActionListener, MouseListener {
@@ -172,6 +173,7 @@ public class GUIHoaDon extends JPanel implements ActionListener, MouseListener {
 		Database.getInstance().connect();
 		QuanLyHoaDon qlhd = new QuanLyHoaDon();
 		List<QLHoaDon> list = qlhd.getHD();
+		System.out.println(list);
 		tableModel.setRowCount(0);
 		jdcND.setCalendar(null);
 		jdcNDD.setCalendar(null);
@@ -238,7 +240,7 @@ public class GUIHoaDon extends JPanel implements ActionListener, MouseListener {
 
 		} else if (src.equals(btnBack)) {
 
-			new GUIMenu(1);
+			new GUILogin();
 			child.setVisible(false);
 		} else if (src.equals(btnTim)) {
 			actionTim();

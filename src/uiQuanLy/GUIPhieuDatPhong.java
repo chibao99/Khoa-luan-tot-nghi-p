@@ -47,6 +47,7 @@ import services.QuanLyHoaDon;
 import services.QuanLyKhachHang;
 import services.QuanLyPhieuDatPhong;
 import services.QuanLyThueTra;
+import uiLogin.GUILogin;
 import uiLogin.GUIMenu;
 
 public class GUIPhieuDatPhong extends JPanel implements ActionListener, MouseListener{
@@ -261,7 +262,7 @@ public class GUIPhieuDatPhong extends JPanel implements ActionListener, MouseLis
 
 		}else if(src.equals(btnBack)) {
 		
-			new GUIMenu(1);
+			new GUILogin();
 			child.setVisible(false);
 		}
 	}

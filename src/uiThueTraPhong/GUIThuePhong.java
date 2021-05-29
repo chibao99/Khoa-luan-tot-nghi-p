@@ -48,6 +48,7 @@ import services.QuanLyKhachHang;
 import services.QuanLyPhong;
 import services.QuanLyThueTra;
 import uiLogin.GUIMenu;
+import uiQuanLy.GUIQuanLyKhachHang;
 
 public class GUIThuePhong extends JFrame implements ActionListener, MouseListener{
 	JPanel pnlWest;
@@ -157,7 +158,7 @@ public class GUIThuePhong extends JFrame implements ActionListener, MouseListene
 					b3.add(Box.createHorizontalStrut(20));
 					b3.add(btnTra = new JButton("Trả Phòng", new ImageIcon(".\\image\\booking.png")));
 					b3.add(Box.createHorizontalStrut(20));
-					b3.add(btnCheckin = new JButton("Checkin", new ImageIcon(".\\image\\reload.png")));
+//					b3.add(btnCheckin = new JButton("Khách Hàng", new ImageIcon(".\\image\\reload.png")));
 					b3.add(Box.createHorizontalStrut(20));
 					b3.add(btnLuu = new JButton("Lưu",new ImageIcon(".\\image\\save.png")));
 
@@ -258,7 +259,7 @@ public class GUIThuePhong extends JFrame implements ActionListener, MouseListene
 		btnTra.addActionListener(this);
 		btnBack.addActionListener(this);
 		btnXoaRong.addActionListener(this);
-		btnCheckin.addActionListener(this);
+//		btnCheckin.addActionListener(this);
 		btnLuu.addActionListener(this);
 		table.addMouseListener(this);
 //		table.setEnabled(true);
@@ -324,30 +325,29 @@ public class GUIThuePhong extends JFrame implements ActionListener, MouseListene
 			dispose();
 		}
 		if(src.equals(btnCheckin)) {
-			btnCheckin.setEnabled(false);
-			btnLuu.setEnabled(true);
-			int row = table.getSelectedRow();
-			if(row==-1) {
-				JOptionPane.showMessageDialog(this,"Cần Chọn Phiếu Checkin");
-				return;
-			}
-			if(table.getValueAt(row, 5).toString().equals("Đã Đặt")) {
-				JOptionPane.showMessageDialog(this, "Phòng Chưa Tới ngày - Không Thể Checkin");
-				return;
-			}
-			String cmnd = table.getValueAt(row, 2).toString();
-			maPhieu = table.getValueAt(row, 0).toString();
-			cmndKH = cmnd;
-			maPhong = txtMaPhong.getText();
-			int mp = Integer.parseInt(maPhong);
-			QuanLyPhong qlps = new QuanLyPhong();
-			Phong p = qlps.tim1Phong(mp);
-			p.setTinhTrangPhong(3);
-
-			cldNgayDen.setEnabled(false);
-			cldNgayDi.setEnabled(false);
-
-
+//			btnCheckin.setEnabled(false);
+//			btnLuu.setEnabled(true);
+//			int row = table.getSelectedRow();
+//			if(row==-1) {
+//				JOptionPane.showMessageDialog(this,"Cần Chọn Phiếu Checkin");
+//				return;
+//			}
+//			if(table.getValueAt(row, 5).toString().equals("Đã Đặt")) {
+//				JOptionPane.showMessageDialog(this, "Phòng Chưa Tới ngày - Không Thể Checkin");
+//				return;
+//			}
+//			String cmnd = table.getValueAt(row, 2).toString();
+//			maPhieu = table.getValueAt(row, 0).toString();
+//			cmndKH = cmnd;
+//			maPhong = txtMaPhong.getText();
+//			int mp = Integer.parseInt(maPhong);
+//			QuanLyPhong qlps = new QuanLyPhong();
+//			Phong p = qlps.tim1Phong(mp);
+//			p.setTinhTrangPhong(3);
+//
+//			cldNgayDen.setEnabled(false);
+//			cldNgayDi.setEnabled(false);
+			
 		}
 		if(src.equals(btnLuu)) {
 //			xoaTableData();
@@ -382,7 +382,8 @@ public class GUIThuePhong extends JFrame implements ActionListener, MouseListene
 		if(src.equals(btnBack)) {
 			// gui = new GUIMenu(1);
 			//gui.showPanel(new GUIThueTraPhong(this));
-			dispose();
+//			dispose();
+			this.setVisible(false);
 		//	System.out.println("ĐÃ BACK");
 		}
 	}

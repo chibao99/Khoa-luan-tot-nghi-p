@@ -51,6 +51,7 @@ import entities.DichVu;
 import entities.KhachHang;
 import services.QuanLyDichVu;
 import services.QuanLyKhachHang;
+import uiLogin.GUILogin;
 import uiLogin.GUIMenu;
 
 /*
@@ -238,17 +239,17 @@ public class GUIQuanLyKhachHang extends JPanel implements ActionListener, MouseL
 		btnHuy.setVisible(false);
 	}
 
-//	public static void main(String[] args) {
-//		//Database.getInstance();
-//		//Database.connect();
-//		try {
-//            UIManager.setLookAndFeel("com.jtattoo.plaf.graphite.GraphiteLookAndFeel");
-//			new GUIQuanLyKhachHang();
-//
-//        }catch (Exception e) {
-//        	e.printStackTrace();
-//		}	
-//	}
+	public static void main(String[] args) {
+		//Database.getInstance();
+		//Database.connect();
+		try {
+            UIManager.setLookAndFeel("com.jtattoo.plaf.graphite.GraphiteLookAndFeel");
+			new GUILogin();
+
+        }catch (Exception e) {
+        	e.printStackTrace();
+		}	
+	}
 
 	String chucNangHienTai = null;
 
@@ -300,9 +301,9 @@ public class GUIQuanLyKhachHang extends JPanel implements ActionListener, MouseL
 		} else if (src.equals(btnXoaRong)) {
 			actionRong();
 		} else if (src.equals(btnBack)) {
-
-			new GUIMenu(1);
-			child.setVisible(false);
+			this.setVisible(false);
+//			new GUIMenu(1);
+//			child.setVisible(false);
 		}
 	}
 

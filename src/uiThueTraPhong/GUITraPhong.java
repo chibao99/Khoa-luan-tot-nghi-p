@@ -508,8 +508,9 @@ public class GUITraPhong extends JFrame implements ActionListener, MouseListener
 		// TODO Auto-generated method stub
 		Object src = e.getSource();
 		if (src.equals(btnBack)) {
-			new GUIThuePhong();
-			this.dispose();
+//			new GUIThuePhong();
+//			this.dispose();
+			this.setVisible(false);
 		}
 		if (src.equals(btnCancel)) {
 			int row = tableRight.getSelectedRow();

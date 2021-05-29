@@ -193,7 +193,6 @@ public class QuanLyHoaDon {
 		CT_HD cthd = new CT_HD();
 		Database.getInstance();
 		Connection con = Database.getConnection();
-		System.out.println("start get CTHD");
 		PreparedStatement stmt = null;
 		try {
 			stmt = con.prepareStatement("EXEC QueryCTHoaDon ?");

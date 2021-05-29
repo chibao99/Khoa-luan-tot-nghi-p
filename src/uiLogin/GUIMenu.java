@@ -254,7 +254,7 @@ public class GUIMenu extends JFrame implements ActionListener {
 
 			UIManager.setLookAndFeel("com.jtattoo.plaf.graphite.GraphiteLookAndFeel");
 
-			new GUIMenu(1);
+			new GUILogin();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
